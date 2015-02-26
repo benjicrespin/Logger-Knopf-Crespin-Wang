@@ -2,20 +2,30 @@ package esiea.projet.v0_3;
 
 import java.io.IOException;
 
-public class loadPropertiesInProg {
+public class LoadPropertiesInProg {
 	
-	getProperties loader;
+	GetProperties loader;
 	String[] loadedProp;  // an array containing the properties (size of 6 String)
 	// In this order : level, formator, target1, target2, target3, target3.path
 	
-	public loadPropertiesInProg() throws IOException {
-		loader = new getProperties();
+	public LoadPropertiesInProg() throws IOException {
+		loader = new GetProperties();
 		loadedProp = new String[6];
 		loadedProp = loader.getPropValues();
 	}
 
-	public String getLevel(String level) {
-		return level = this.loadedProp[0];
+	public String getLevel() {
+		switch (this.loadedProp[0]) {
+		case "DEBUG":
+			return this.loadedProp[0];
+		case "INFO":
+			return this.loadedProp[0];
+		case "ERROR":
+			return this.loadedProp[0];
+		default:
+			System.out.println("Wrong format for the level property, setting default on ERROR");
+			return "ERROR";
+		}
 	}
 	
 	public String getFormator(String formator) {

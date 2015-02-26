@@ -6,11 +6,11 @@ import java.io.InputStream;
 import java.util.Date;
 import java.util.Properties;
 
-public class getProperties {
+public class GetProperties {
 	
 		String[] loadedProp;
 	
-		public getProperties() {
+		public GetProperties() {
 			loadedProp = new String[6];
 		}
 	

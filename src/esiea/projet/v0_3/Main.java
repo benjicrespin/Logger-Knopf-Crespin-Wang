@@ -9,7 +9,7 @@ public class Main {
 		// make a new class for test
 		MyClass myClass = new MyClass();
 		// start function init()
-		getProperties config = new getProperties();
+		GetProperties config = new GetProperties();
 		
 		config.getPropValues();
 		
