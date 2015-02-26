@@ -1,5 +1,7 @@
 package esiea.projet.v0_3;
 
+import java.io.IOException;
+
 public class LoggerConsole extends Logger {
 
 	public LoggerConsole(Class<?> class1) {

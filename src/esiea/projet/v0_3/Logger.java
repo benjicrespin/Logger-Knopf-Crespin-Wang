@@ -1,5 +1,6 @@
 package esiea.projet.v0_3;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -12,11 +13,14 @@ public abstract class Logger {
 	private String message;
 	//level
 	private Level level;
-	//constuctor
+	
+	//LoadPropertiesInProg prop;
+	//constructor
 	public Logger(Class <?> class1){
 		setName(class1.getName());
+		//prop = new LoadPropertiesInProg();
 	}
-	// function for diffirent level
+	// function for different level
 	public abstract void debug(String message);
 	public abstract void info(String message);
 	public abstract void error(String message);
