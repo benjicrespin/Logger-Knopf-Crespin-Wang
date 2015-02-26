@@ -57,7 +57,7 @@ public abstract class Logger {
 	public void setLevel(Level level) {
 		this.level = level;
 	}
-	// function for oupputting
+	// function for outputting
 	@Override
 	public String toString() {
 		return date + 

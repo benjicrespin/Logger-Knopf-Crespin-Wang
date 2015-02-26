@@ -13,5 +13,9 @@ public class MyClass {
 		loggerConsole.info("init.....");
 		loggerDB.info("init....");
 		loggerFile.info("init....");
+		
+		loggerConsole.debug("init.....");
+		loggerDB.debug("init....");
+		loggerFile.debug("init....");
 	}
 }
