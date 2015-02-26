@@ -10,12 +10,18 @@ public class MyClass {
 	private Logger loggerFile = loggerFactoryFile.createLogger(MyClass.class);
 	
 	public void init(){
-		loggerConsole.info("init.....");
-		loggerDB.info("init....");
-		loggerFile.info("init....");
+		//loggerConsole.info("init.....");
+		//loggerDB.info("init....");
+		//loggerFile.info("init....");
 		
-		loggerConsole.debug("init.....");
-		loggerDB.debug("init....");
-		loggerFile.debug("init....");
+		//loggerConsole.debug("init.....");
+		//loggerDB.debug("init....");
+		//loggerFile.debug("init....");
+		loggerConsole.showMessage(Level.DEBUG, "init");
+		System.out.println("------------------------------------");
+		loggerDB.showMessage(Level.INFO, "init");
+		System.out.println("------------------------------------");
+		loggerFile.showMessage(Level.ERROR, "init");
+		System.out.println("------------------------------------");
 	}
 }

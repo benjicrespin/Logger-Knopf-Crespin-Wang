@@ -67,4 +67,39 @@ public abstract class Logger {
 				", MESSAGE = " + message + " ]";
 	
 	}
+	public void showMessage(Level level, String message)
+	{
+		switch(level){
+			case DEBUG:
+				debug(message);
+				//break;
+			case INFO:
+				info(message);
+				//break;
+			case ERROR:
+				error(message);
+				break;
+			default:
+				break;	
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
