@@ -8,11 +8,13 @@ import java.util.Properties;
 
 public class getProperties {
 	
+		String[] loadedProp;
+	
 		public getProperties() {
-			
+			loadedProp = new String[6];
 		}
 	
-		public String getPropValues() throws IOException {
+		public String[] getPropValues() throws IOException {
 			 
 			String result = "";
 			Properties prop = new Properties();
@@ -29,16 +31,16 @@ public class getProperties {
 			Date time = new Date(System.currentTimeMillis());
 			 
 			// get the property value and print it out
-			String level = prop.getProperty("level");
-			String formator = prop.getProperty("formator");
-			String cible1 = prop.getProperty("cible1");
-			String cible2 = prop.getProperty("cible2");
-			String cible3 = prop.getProperty("cible3");
-			String cible3Path = prop.getProperty("cible3.path");
+			loadedProp[0] = prop.getProperty("level");
+			loadedProp[1] = prop.getProperty("formator");
+			loadedProp[2] = prop.getProperty("target1");
+			loadedProp[3] = prop.getProperty("target2");
+			loadedProp[4] = prop.getProperty("target3");
+			loadedProp[5] = prop.getProperty("target3.path");
 			 
-			result = "[FOR TEST USE ONLY = " + level + ", " + formator + ", " + cible1 + ", " + cible2 + ", " + cible3 + ", " + cible3Path + "]";
+			result = "[FOR TEST USE ONLY = " + loadedProp[0] + ", " + loadedProp[1] + ", " + loadedProp[2] + ", " + loadedProp[3] + ", " + loadedProp[4] + ", " + loadedProp[5] + "]";
 			System.out.println(result + "\nProperties File loaded at " + time);
-			return result;
+			return loadedProp;
 			}
 		
 }
