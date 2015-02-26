@@ -16,7 +16,7 @@ public class GetProperties {
 	
 		public String[] getPropValues() throws IOException {
 			 
-			String result = "";
+			String test = "";
 			Properties prop = new Properties();
 			String propFileName = "./resources/config.properties";
 			 
@@ -38,8 +38,8 @@ public class GetProperties {
 			loadedProp[4] = prop.getProperty("target3");
 			loadedProp[5] = prop.getProperty("target3.path");
 			 
-			result = "[FOR TEST USE ONLY = " + loadedProp[0] + ", " + loadedProp[1] + ", " + loadedProp[2] + ", " + loadedProp[3] + ", " + loadedProp[4] + ", " + loadedProp[5] + "]";
-			System.out.println(result + "\nProperties File loaded at " + time);
+			test = "[FOR TEST USE ONLY = " + loadedProp[0] + ", " + loadedProp[1] + ", " + loadedProp[2] + ", " + loadedProp[3] + ", " + loadedProp[4] + ", " + loadedProp[5] + "]";
+			//System.out.println(test + "\nProperties File loaded at " + time);
 			return loadedProp;
 			}
 		

@@ -28,23 +28,23 @@ public class LoadPropertiesInProg {
 		}
 	}
 	
-	public String getFormator(String formator) {
-		return formator = this.loadedProp[1];
+	public String getFormator() {
+		return this.loadedProp[1];
 	}
 	
-	public String getTarget1(String target1) {
-		return target1 = this.loadedProp[2];
+	public String getTarget1() {
+		return this.loadedProp[2];
 	}
 	
-	public String getTarget2(String target2) {
-		return target2 = this.loadedProp[3];
+	public String getTarget2() {
+		return this.loadedProp[3];
 	}
 	
-	public String getTarget3(String target3) {
-		return target3 = this.loadedProp[4];
+	public String getTarget3() {
+		return this.loadedProp[4];
 	}
 	
-	public String getTarget3Path(String target3Path) {
-		return target3Path = this.loadedProp[5];
+	public String getTarget3Path() {
+		return this.loadedProp[5];
 	}
 }
