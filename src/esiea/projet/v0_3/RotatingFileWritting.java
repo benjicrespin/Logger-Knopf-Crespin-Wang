@@ -9,13 +9,9 @@ import java.util.ArrayList;
 
 public class RotatingFileWritting {
 	
-	ArrayList<String> alphabetFinal; 
-	ArrayList<Float> smoothedProbabilities;
 	int counter = 0;
 	
 	public RotatingFileWritting() {
-		alphabetFinal = new ArrayList<String>();
-		smoothedProbabilities = new ArrayList<Float>();
 	}
 	
 	
