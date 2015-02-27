@@ -1,5 +1,7 @@
 package esiea.projet.v0_3;
 
+import java.lang.invoke.SwitchPoint;
+
 public class MyClass {
 	
 	private LoggerFactory loggerFactoryConsole = new LoggerFactoryConsole();
@@ -11,30 +13,20 @@ public class MyClass {
 	private LoggerFactory rotatingLoggerFactoryFile = new LoggerFactoryRotatingFile();
 	private Logger loggerRotatingFile = rotatingLoggerFactoryFile.createLogger(MyClass.class);
 	
-	FileWritting test;
-	RotatingFileWritting test2;
+	LoadPropertiesInProg prop;
+	
 	
 	public MyClass() {
-		
+		prop = new LoadPropertiesInProg();
 	}
 	
 	public void init(){
 		
-		LoadPropertiesInProg prop;
-		prop = new LoadPropertiesInProg();
 		
-		if (prop.getConsole().compareTo("true") == 0){
-			loggerConsole.setLevel(prop.getLevel());
-			
-		}
-		if (!prop.getTarget2().isEmpty()){
-			loggerFile.setLevel(prop.getLevel());
-			
-		}
-		if (!prop.getTarget3().isEmpty()){
-			loggerRotatingFile.setLevel(prop.getLevel());
-			
-		}
+		
+		loggerConsole.setLevel(prop.getLevel());
+		loggerFile.setLevel(prop.getLevel());
+		loggerRotatingFile.setLevel(prop.getLevel());
 		
 		loggerConsole.info("testing.....");
 		loggerFile.info("testing....");
@@ -50,5 +42,57 @@ public class MyClass {
 		System.out.println("------------------------------------");
 		loggerFile.showMessage(Level.ERROR, "init");
 		System.out.println("------------------------------------");
+	}
+	
+	public void useLogger(Level level, String message)
+	{
+		if (prop.getConsole().compareTo("true") == 0){
+			switch(level){
+				case DEBUG:
+					loggerConsole.debug(message);
+					break;
+				case INFO:
+					loggerConsole.info(message);
+					break;
+				case ERROR:
+					loggerConsole.error(message);
+					break;
+				default:
+					break;
+			}
+		}
+		
+		for (String target : prop.getTargets()){
+			if (target.contains("rot") == true){
+				switch(level){
+				case DEBUG:
+					loggerRotatingFile.debug(message);
+					break;
+				case INFO:
+					loggerRotatingFile.info(message);
+					break;
+				case ERROR:
+					loggerRotatingFile.error(message);
+					break;
+				default:
+					break;
+			}
+			}
+			else if (!target.isEmpty()){
+				switch(level){
+				case DEBUG:
+					loggerFile.debug(message);
+					break;
+				case INFO:
+					loggerFile.info(message);
+					break;
+				case ERROR:
+					loggerFile.error(message);
+					break;
+				default:
+					break;
+			}
+			}
+		}
 	}
 }

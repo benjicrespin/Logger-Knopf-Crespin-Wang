@@ -17,7 +17,7 @@ public class LoggerFile extends Logger {
 		// TODO Auto-generated method stub
 		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
-		writting.OutputTextPrint(prop.getTarget2(), message);
+		writting.OutputTextPrint(prop.getTargets().get(2), message);
 		//setLevel(Level.DEBUG);
 		setDate();
 		System.out.println(toString());
@@ -28,7 +28,7 @@ public class LoggerFile extends Logger {
 		// TODO Auto-generated method stub
 		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
-		writting.OutputTextPrint(prop.getTarget2(), message);
+		writting.OutputTextPrint(prop.getTargets().get(2), message);
 		//setLevel(Level.INFO);
 		setDate();
 		System.out.println(toString());
@@ -39,7 +39,7 @@ public class LoggerFile extends Logger {
 		// TODO Auto-generated method stub
 		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
-		writting.OutputTextPrint(prop.getTarget2(), message);
+		writting.OutputTextPrint(prop.getTargets().get(2), message);
 		//setLevel(Level.ERROR);
 		setDate();
 		System.out.println(toString());

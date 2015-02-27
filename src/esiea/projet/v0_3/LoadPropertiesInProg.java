@@ -36,19 +36,11 @@ public class LoadPropertiesInProg {
 		return this.loadedProp.get(2);
 	}
 	
-	public String getTarget2() {
-		return this.loadedProp.get(3);
-	}
-	
-	public String getTarget3() {
-		return this.loadedProp.get(4);
-	}
-	
-	public String getTarget4() {
-		return this.loadedProp.get(5);
-	}
-	
-	public String getTarget5() {
-		return this.loadedProp.get(6);
+	public ArrayList<String> getTargets() {
+		ArrayList<String> loadedPropCopy = new ArrayList<String>();
+		loadedPropCopy.addAll(loadedProp);
+		loadedPropCopy.remove(0);
+		loadedPropCopy.remove(1);
+		return this.loadedProp;
 	}
 }

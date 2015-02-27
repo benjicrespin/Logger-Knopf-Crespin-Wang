@@ -29,7 +29,6 @@ public class GetProperties {
 				new FileNotFoundException("properties file '" + propFileName + "' not found in the classpath");
 			}
 			 
-			 
 			// get the property value and print it out
 			loadedProp.add(prop.getProperty("level"));
 			loadedProp.add(prop.getProperty("formator"));
