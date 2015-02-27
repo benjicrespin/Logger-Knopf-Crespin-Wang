@@ -20,7 +20,7 @@ public class LoggerFile extends Logger {
 		writting.OutputTextPrint(prop.getTargets().get(2), message);
 		//setLevel(Level.DEBUG);
 		setDate();
-		System.out.println(toString());
+		System.out.println(useFormator());
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class LoggerFile extends Logger {
 		writting.OutputTextPrint(prop.getTargets().get(2), message);
 		//setLevel(Level.INFO);
 		setDate();
-		System.out.println(toString());
+		System.out.println(useFormator());
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class LoggerFile extends Logger {
 		writting.OutputTextPrint(prop.getTargets().get(2), message);
 		//setLevel(Level.ERROR);
 		setDate();
-		System.out.println(toString());
+		System.out.println(useFormator());
 	}
 
 }

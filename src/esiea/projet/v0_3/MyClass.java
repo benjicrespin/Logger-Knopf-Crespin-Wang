@@ -26,6 +26,10 @@ public class MyClass {
 		loggerFile.setLevel(prop.getLevel());
 		loggerRotatingFile.setLevel(prop.getLevel());
 		
+		loggerConsole.setFormator(prop.getFormator());
+		loggerFile.setFormator(prop.getFormator());
+		loggerRotatingFile.setFormator(prop.getFormator());
+		
 		loggerConsole.info("testing.....");
 		loggerFile.info("testing....");
 		loggerRotatingFile.info("testing");
