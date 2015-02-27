@@ -4,30 +4,42 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 
 public class RotatingFileWritting {
 	
-	int counter = 0;
+	public String date;
 	
 	public RotatingFileWritting() {
+		date = getCurrentTime();
 	}
 	
+	public String getCurrentTime(){
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat formatter = new SimpleDateFormat("HH_mm_ss");
+		String dateString = formatter.format(calendar.getTime());
+		return dateString;
+	}
 	
 	void OutputTextPrint(String target, String message){
-		File file;
 		PrintWriter outputTxt = null;
 		
+		
+		
+		File file = new File(target.replaceAll(".txt", "") + date + ".txt");
+		
 		try{
-				
-				file = new File(target.replaceAll(".txt", "") + counter + ".txt");
+
+				//new File(target.replaceAll(".txt", "") + date + ".txt");
 				outputTxt = new PrintWriter(new FileWriter(file, true)) ;
 				if (file.length() <= 250) {
 					outputTxt.print(message);
 					outputTxt.println();
+					
 				}
-				else{
-					counter++;
-				}
+
 		}catch(IOException e){
 			System.out.println("Erreur :" + e);
 		} finally {
