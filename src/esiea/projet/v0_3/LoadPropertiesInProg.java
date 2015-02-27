@@ -14,17 +14,17 @@ public class LoadPropertiesInProg {
 		loadedProp = loader.getPropValues();
 	}
 
-	public String getLevel() {
+	public Level getLevel() {
 		switch (this.loadedProp.get(0)) {
 		case "DEBUG":
-			return this.loadedProp.get(0);
+			return Level.DEBUG;
 		case "INFO":
-			return this.loadedProp.get(0);
+			return Level.INFO;
 		case "ERROR":
-			return this.loadedProp.get(0);
+			return Level.ERROR;
 		default:
 			System.out.println("Wrong format for the level property, setting default on ERROR");
-			return "ERROR";
+			return Level.ERROR;
 		}
 	}
 	
