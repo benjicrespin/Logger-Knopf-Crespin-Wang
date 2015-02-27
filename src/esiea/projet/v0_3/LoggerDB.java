@@ -1,5 +1,7 @@
 package esiea.projet.v0_3;
 
+
+
 public class LoggerDB extends Logger {
 
 	public LoggerDB(Class<?> class1) {
@@ -14,7 +16,7 @@ public class LoggerDB extends Logger {
 		setMessage(message);
 		//setLevel(Level.DEBUG);
 		setDate();
-		System.out.println(toString());
+		System.out.println(useFormator());
 	}
 
 	@Override
@@ -24,7 +26,7 @@ public class LoggerDB extends Logger {
 		setMessage(message);
 		//setLevel(Level.INFO);
 		setDate();
-		System.out.println(toString());
+		System.out.println(useFormator());
 	}
 
 	@Override
@@ -34,6 +36,6 @@ public class LoggerDB extends Logger {
 		setMessage(message);
 		//setLevel(Level.ERROR);
 		setDate();
-		System.out.println(toString());
+		System.out.println(useFormator());
 	}
 }

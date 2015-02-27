@@ -10,30 +10,30 @@ public class LoggerConsole extends Logger {
 	@Override
 	public void debug(String message) {
 		// TODO Auto-generated method stub
-		//System.out.println("Console writing[FOR TEST ONLY]:");
+		System.out.println("Console writing[FOR TEST ONLY]:");
 		setMessage(message);
 		//setLevel(Level.DEBUG);
 		setDate();
-		System.out.println(toString());
+		System.out.println(useFormator());
 		}
 
 	@Override
 	public void info(String message) {
 		// TODO Auto-generated method stub
-		//System.out.println("Console writing[FOR TEST ONLY]:");
+		System.out.println("Console writing[FOR TEST ONLY]:");
 		setMessage(message);
 		//setLevel(Level.INFO);
 		setDate();
-		System.out.println(toString());
+		System.out.println(useFormator());
 	}
 
 	@Override
 	public void error(String message) {
 		// TODO Auto-generated method stub
-		//System.out.println("Console writing[FOR TEST ONLY]:");
+		System.out.println("Console writing[FOR TEST ONLY]:");
 		setMessage(message);
 		//setLevel(Level.ERROR);
 		setDate();
-		System.out.println(toString());
+		System.out.println(useFormator());
 	}
 }

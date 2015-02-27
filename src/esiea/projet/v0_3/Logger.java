@@ -14,6 +14,14 @@ public abstract class Logger {
 	//private Level level;
 	private String level;
 	
+	private String formator;
+	
+	public String getFormator() {
+		return formator;
+	}
+	public void setFormator(String formator) {
+		this.formator = formator;
+	}
 	//constructor
 	public Logger(Class <?> class1){
 		setName(class1.getName());
@@ -23,6 +31,33 @@ public abstract class Logger {
 	public abstract void info(String message);
 	public abstract void error(String message);
 	
+	public String useFormator(){
+		this.formator = new LoadPropertiesInProg().getFormator();
+		switch (getFormator()) {
+		case "all":
+			return toString();
+		case "name":
+			return toStringName() + "    " + toStringMessage();
+		case "name,level":
+			return toStringName() +"    " + toStringLevel() +"    " + toStringMessage();
+		case "name,date":
+			return toStringName() +"    " + toStringDate() +"    " + toStringMessage();
+		case "level":
+			return toStringLevel() + "    " + toStringMessage();
+		case "level,name":
+			return toStringLevel() +"    " + toStringName() +"    " + toStringMessage();
+		case "level,date":
+			return toStringLevel() +"    " + toStringDate() +"    " + toStringMessage();
+		case "date":
+			return toStringDate() + "    " + toStringMessage();
+		case "date,name":
+			return toStringDate() +"    " + toStringName() +"    " + toStringMessage();
+		case "date, level":
+			return toStringDate() +"    " + toStringLevel() +"    " + toStringMessage();
+		default:
+			return toString();
+		}
+	}
 	// setter and getter for variables
 	public String getDate() {
 		return date;
@@ -68,6 +103,22 @@ public abstract class Logger {
 				", LEVEL = " + level + 
 				", MESSAGE = " + message + " ]";
 	
+	}
+	private String toStringName() {
+		// TODO Auto-generated method stub
+		return "NAME = " + name; 
+	}
+	private String toStringDate() {
+		// TODO Auto-generated method stub
+		return date; 
+	}
+	private String toStringLevel() {
+		// TODO Auto-generated method stub
+		return "LEVEL = " + level; 
+	}
+	private String toStringMessage() {
+		// TODO Auto-generated method stub
+		return "MESSAGE = " + message; 
 	}
 	public void showMessage(Level level, String message)
 	{
