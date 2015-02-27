@@ -33,10 +33,10 @@ public class GetProperties {
 			loadedProp.add(prop.getProperty("level"));
 			loadedProp.add(prop.getProperty("formator"));
 			loadedProp.add(prop.getProperty("console"));
+			loadedProp.add(prop.getProperty("target1"));
 			loadedProp.add(prop.getProperty("target2"));
 			loadedProp.add(prop.getProperty("target3"));
 			loadedProp.add(prop.getProperty("target4"));
-			loadedProp.add(prop.getProperty("target5"));
 			
 			return loadedProp;
 			}

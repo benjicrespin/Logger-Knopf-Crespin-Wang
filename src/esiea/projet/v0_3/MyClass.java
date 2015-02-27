@@ -32,11 +32,11 @@ public class MyClass {
 		
 		loggerConsole.info("testing1.....");
 		loggerFile.info("testing2....");
-		//loggerRotatingFile.info("testing3");
+		loggerRotatingFile.info("testing3");
 		
 		loggerConsole.debug("testing4.....");
 		loggerFile.debug("testing5....");
-		//loggerRotatingFile.debug("testing6");
+		loggerRotatingFile.debug("testing6");
 		
 		System.out.println();
 		

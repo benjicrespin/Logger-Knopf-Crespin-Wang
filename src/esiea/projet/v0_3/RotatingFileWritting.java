@@ -20,8 +20,8 @@ public class RotatingFileWritting {
 		try{
 				
 				file = new File(target.replaceAll(".txt", "") + counter + ".txt");
-				if (file.length() <= 500) {
-					outputTxt = new PrintWriter(new FileWriter(file, true)) ;
+				outputTxt = new PrintWriter(new FileWriter(file, true)) ;
+				if (file.length() <= 250) {
 					outputTxt.print(message);
 					outputTxt.println();
 				}

@@ -39,8 +39,9 @@ public class LoadPropertiesInProg {
 	public ArrayList<String> getTargets() {
 		ArrayList<String> loadedPropCopy = new ArrayList<String>();
 		loadedPropCopy.addAll(loadedProp);
-		loadedPropCopy.remove(0);
+		loadedPropCopy.remove(2);
 		loadedPropCopy.remove(1);
-		return this.loadedProp;
+		loadedPropCopy.remove(0);
+		return loadedPropCopy;
 	}
 }
