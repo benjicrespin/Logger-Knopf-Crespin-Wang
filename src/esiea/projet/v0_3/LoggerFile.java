@@ -15,7 +15,7 @@ public class LoggerFile extends Logger {
 	@Override
 	public void debug(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("File writing[FOR TEST ONLY]:");
+		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
 		writting.OutputTextPrint(prop.getTarget2(), message);
 		//setLevel(Level.DEBUG);
@@ -26,7 +26,7 @@ public class LoggerFile extends Logger {
 	@Override
 	public void info(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("File writing[FOR TEST ONLY]:");
+		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
 		writting.OutputTextPrint(prop.getTarget2(), message);
 		//setLevel(Level.INFO);
@@ -37,7 +37,7 @@ public class LoggerFile extends Logger {
 	@Override
 	public void error(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("File writing[FOR TEST ONLY]:");
+		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
 		writting.OutputTextPrint(prop.getTarget2(), message);
 		//setLevel(Level.ERROR);

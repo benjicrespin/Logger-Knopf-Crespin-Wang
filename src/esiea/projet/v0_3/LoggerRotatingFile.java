@@ -2,12 +2,12 @@ package esiea.projet.v0_3;
 
 public class LoggerRotatingFile extends Logger {
 
-	FileWritting writting;
+	RotatingFileWritting writting;
 	LoadPropertiesInProg prop;
 	
 	public LoggerRotatingFile(Class<?> class1) {
 		super(class1);
-		writting = new FileWritting();
+		writting = new RotatingFileWritting();
 		prop = new LoadPropertiesInProg();
 		// TODO Auto-generated constructor stub
 	}
@@ -15,7 +15,7 @@ public class LoggerRotatingFile extends Logger {
 	@Override
 	public void debug(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("File writing[FOR TEST ONLY]:");
+		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
 		writting.OutputTextPrint(prop.getTarget3(), message);
 		//setLevel(Level.DEBUG);
@@ -26,7 +26,7 @@ public class LoggerRotatingFile extends Logger {
 	@Override
 	public void info(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("File writing[FOR TEST ONLY]:");
+		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
 		writting.OutputTextPrint(prop.getTarget3(), message);
 		//setLevel(Level.INFO);
@@ -37,7 +37,7 @@ public class LoggerRotatingFile extends Logger {
 	@Override
 	public void error(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("File writing[FOR TEST ONLY]:");
+		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
 		writting.OutputTextPrint(prop.getTarget3(), message);
 		//setLevel(Level.ERROR);

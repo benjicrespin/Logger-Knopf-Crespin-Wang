@@ -8,6 +8,8 @@ public class MyClass {
 	private Logger loggerDB = loggerFactoryDB.createLogger(MyClass.class);
 	private LoggerFactory loggerFactoryFile = new LoggerFactoryFile();
 	private Logger loggerFile = loggerFactoryFile.createLogger(MyClass.class);
+	private LoggerFactory rotatingLoggerFactoryFile = new LoggerFactoryRotatingFile();
+	private Logger loggerRotatingFile = rotatingLoggerFactoryFile.createLogger(MyClass.class);
 	
 	FileWritting test;
 	RotatingFileWritting test2;
@@ -30,23 +32,21 @@ public class MyClass {
 			
 		}
 		if (!prop.getTarget3().isEmpty()){
-			loggerFile.setLevel(prop.getLevel());
+			loggerRotatingFile.setLevel(prop.getLevel());
 			
 		}
 		
 		loggerConsole.info("testing.....");
-		//loggerDB.info("testing....");
 		loggerFile.info("testing....");
+		loggerRotatingFile.info("testing");
 		
-		loggerConsole.debug("init.....");
-		//loggerDB.debug("init....");
-		loggerFile.debug("init....");
+		loggerConsole.debug("testing.....");
+		loggerFile.debug("testing....");
+		loggerRotatingFile.debug("testing");
 		
 		System.out.println();
 		
 		loggerConsole.showMessage(Level.DEBUG, "init");
-		System.out.println("------------------------------------");
-		loggerDB.showMessage(Level.INFO, "init");
 		System.out.println("------------------------------------");
 		loggerFile.showMessage(Level.ERROR, "init");
 		System.out.println("------------------------------------");

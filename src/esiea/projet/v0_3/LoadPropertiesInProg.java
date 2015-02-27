@@ -1,6 +1,5 @@
 package esiea.projet.v0_3;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 public class LoadPropertiesInProg {
