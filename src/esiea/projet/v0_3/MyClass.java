@@ -40,7 +40,7 @@ public class MyClass {
 		
 		for (int i = 0; i < 150; i++){
 			test.OutputTextPrint("./src/log/log.txt", "test");
-			test2.OutputTextPrint("./src/rlog/log.txt", "test");
+			test2.OutputTextPrint("./src/rlog/rlog.txt", "test");
 		}
 		//loggerConsole.info("init.....");
 		//loggerDB.info("init....");
