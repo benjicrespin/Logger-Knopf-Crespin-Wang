@@ -10,6 +10,13 @@ public class MyClass {
 	private Logger loggerFile = loggerFactoryFile.createLogger(MyClass.class);
 	
 	public void init(){
+		
+		LoadPropertiesInProg prop;
+		prop = new LoadPropertiesInProg();
+		loggerConsole.setLevel(prop.getLevel());
+		loggerDB.setLevel(prop.getLevel());
+		loggerFile.setLevel(prop.getLevel());
+		
 		//loggerConsole.info("init.....");
 		//loggerDB.info("init....");
 		//loggerFile.info("init....");

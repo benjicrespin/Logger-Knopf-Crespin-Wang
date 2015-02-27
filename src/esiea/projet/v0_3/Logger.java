@@ -14,13 +14,9 @@ public abstract class Logger {
 	//private Level level;
 	private String level;
 	
-	LoadPropertiesInProg prop;
-	
-	
 	//constructor
 	public Logger(Class <?> class1){
 		setName(class1.getName());
-		prop = new LoadPropertiesInProg();
 	}
 	// function for different level
 	public abstract void debug(String message);
@@ -60,8 +56,8 @@ public abstract class Logger {
 		return level;
 	}*/
 
-	public void setLevel() {
-		this.level = prop.getLevel();
+	public void setLevel(String level) {
+		this.level = level;
 	}
 	// function for outputting
 	@Override
