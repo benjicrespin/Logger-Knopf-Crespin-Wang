@@ -34,21 +34,16 @@ public class MyClass {
 			
 		}
 		
+		loggerConsole.info("testing.....");
+		//loggerDB.info("testing....");
+		loggerFile.info("testing....");
 		
-		test = new FileWritting();
-		test2 = new RotatingFileWritting();
-		
-		for (int i = 0; i < 150; i++){
-			test.OutputTextPrint("./src/log/log.txt", "test");
-			test2.OutputTextPrint("./src/rlog/log.txt", "test");
-		}
-		//loggerConsole.info("init.....");
-		//loggerDB.info("init....");
-		//loggerFile.info("init....");
-		
-		//loggerConsole.debug("init.....");
+		loggerConsole.debug("init.....");
 		//loggerDB.debug("init....");
-		//loggerFile.debug("init....");
+		loggerFile.debug("init....");
+		
+		System.out.println();
+		
 		loggerConsole.showMessage(Level.DEBUG, "init");
 		System.out.println("------------------------------------");
 		loggerDB.showMessage(Level.INFO, "init");

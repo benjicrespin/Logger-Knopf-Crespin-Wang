@@ -10,7 +10,7 @@ public class LoggerDB extends Logger {
 	@Override
 	public void debug(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("DateBase writing[FOR TEST ONLY]:");
+		System.out.println("DataBase writing[FOR TEST ONLY]:");
 		setMessage(message);
 		//setLevel(Level.DEBUG);
 		setDate();
@@ -20,7 +20,7 @@ public class LoggerDB extends Logger {
 	@Override
 	public void info(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("DateBase writing[FOR TEST ONLY]:");
+		System.out.println("DataBase writing[FOR TEST ONLY]:");
 		setMessage(message);
 		//setLevel(Level.INFO);
 		setDate();
@@ -30,7 +30,7 @@ public class LoggerDB extends Logger {
 	@Override
 	public void error(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("DateBase writing[FOR TEST ONLY]:");
+		System.out.println("DataeBase writing[FOR TEST ONLY]:");
 		setMessage(message);
 		//setLevel(Level.ERROR);
 		setDate();
