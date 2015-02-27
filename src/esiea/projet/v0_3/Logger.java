@@ -1,6 +1,5 @@
 package esiea.projet.v0_3;
 
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -12,20 +11,23 @@ public abstract class Logger {
 	//message
 	private String message;
 	//level
-	private Level level;
+	//private Level level;
+	private String level;
 	
-	//LoadPropertiesInProg prop;
+	LoadPropertiesInProg prop;
+	
+	
 	//constructor
 	public Logger(Class <?> class1){
 		setName(class1.getName());
-		//prop = new LoadPropertiesInProg();
+		prop = new LoadPropertiesInProg();
 	}
 	// function for different level
 	public abstract void debug(String message);
 	public abstract void info(String message);
 	public abstract void error(String message);
 	
-	// setter and getter for variable
+	// setter and getter for variables
 	public String getDate() {
 		return date;
 	}
@@ -54,12 +56,12 @@ public abstract class Logger {
 		this.message = message;
 	}
 	
-	public Enum<Level> getLevel() {
+	/*public Enum<Level> getLevel() {
 		return level;
-	}
+	}*/
 
-	public void setLevel(Level level) {
-		this.level = level;
+	public void setLevel() {
+		this.level = prop.getLevel();
 	}
 	// function for outputting
 	@Override

@@ -1,7 +1,5 @@
 package esiea.projet.v0_3;
 
-import java.io.IOException;
-
 public class LoggerFactoryDB implements LoggerFactory {
 
 	@Override

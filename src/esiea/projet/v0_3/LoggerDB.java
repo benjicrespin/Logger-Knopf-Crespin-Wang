@@ -1,7 +1,5 @@
 package esiea.projet.v0_3;
 
-import java.io.IOException;
-
 public class LoggerDB extends Logger {
 
 	public LoggerDB(Class<?> class1) {
@@ -14,7 +12,7 @@ public class LoggerDB extends Logger {
 		// TODO Auto-generated method stub
 		System.out.println("DateBase writing[FOR TEST ONLY]:");
 		setMessage(message);
-		setLevel(Level.DEBUG);
+		//setLevel(Level.DEBUG);
 		setDate();
 		System.out.println(toString());
 	}
@@ -24,7 +22,7 @@ public class LoggerDB extends Logger {
 		// TODO Auto-generated method stub
 		System.out.println("DateBase writing[FOR TEST ONLY]:");
 		setMessage(message);
-		setLevel(Level.INFO);
+		//setLevel(Level.INFO);
 		setDate();
 		System.out.println(toString());
 	}
@@ -34,7 +32,7 @@ public class LoggerDB extends Logger {
 		// TODO Auto-generated method stub
 		System.out.println("DateBase writing[FOR TEST ONLY]:");
 		setMessage(message);
-		setLevel(Level.ERROR);
+		//setLevel(Level.ERROR);
 		setDate();
 		System.out.println(toString());
 	}

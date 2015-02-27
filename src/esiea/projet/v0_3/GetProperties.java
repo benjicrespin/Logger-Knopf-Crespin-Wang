@@ -3,7 +3,6 @@ package esiea.projet.v0_3;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Date;
 import java.util.Properties;
 
 public class GetProperties {
@@ -14,21 +13,21 @@ public class GetProperties {
 			loadedProp = new String[6];
 		}
 	
-		public String[] getPropValues() throws IOException {
+		public String[] getPropValues() {
 			 
-			String test = "";
+			String test;
 			Properties prop = new Properties();
 			String propFileName = "config.properties";
 			 
 			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
 			 
-			if (inputStream != null) {
+			try {
+			if (inputStream != null)
 				prop.load(inputStream);
-			} else {
-			throw new FileNotFoundException("properties file '" + propFileName + "' not found in the classpath");
+			} catch(IOException e) {
+				new FileNotFoundException("properties file '" + propFileName + "' not found in the classpath");
 			}
 			 
-			Date time = new Date(System.currentTimeMillis());
 			 
 			// get the property value and print it out
 			loadedProp[0] = prop.getProperty("level");

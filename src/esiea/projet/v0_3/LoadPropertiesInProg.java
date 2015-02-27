@@ -1,14 +1,12 @@
 package esiea.projet.v0_3;
 
-import java.io.IOException;
-
 public class LoadPropertiesInProg {
 	
 	GetProperties loader;
 	String[] loadedProp;  // an array containing the properties (size of 6 String)
 	// In this order : level, formator, target1, target2, target3, target3.path
 	
-	public LoadPropertiesInProg() throws IOException {
+	public LoadPropertiesInProg() {
 		loader = new GetProperties();
 		loadedProp = new String[6];
 		loadedProp = loader.getPropValues();
