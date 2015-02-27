@@ -1,21 +1,22 @@
 package esiea.projet.v0_3;
 
+import java.awt.List;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class GetProperties {
 	
-		String[] loadedProp;
+		ArrayList<String> loadedProp;
 	
 		public GetProperties() {
-			loadedProp = new String[6];
+			loadedProp = new ArrayList<String>();
 		}
 	
-		public String[] getPropValues() {
+		public ArrayList<String> getPropValues() {
 			 
-			String test;
 			Properties prop = new Properties();
 			String propFileName = "config.properties";
 			 
@@ -30,15 +31,14 @@ public class GetProperties {
 			 
 			 
 			// get the property value and print it out
-			loadedProp[0] = prop.getProperty("level");
-			loadedProp[1] = prop.getProperty("formator");
-			loadedProp[2] = prop.getProperty("target1");
-			loadedProp[3] = prop.getProperty("target2");
-			loadedProp[4] = prop.getProperty("target3");
-			loadedProp[5] = prop.getProperty("target3.path");
-			 
-			test = "[FOR TEST USE ONLY = " + loadedProp[0] + ", " + loadedProp[1] + ", " + loadedProp[2] + ", " + loadedProp[3] + ", " + loadedProp[4] + ", " + loadedProp[5] + "]";
-			//System.out.println(test + "\nProperties File loaded at " + time);
+			loadedProp.add(prop.getProperty("level"));
+			loadedProp.add(prop.getProperty("formator"));
+			loadedProp.add(prop.getProperty("console"));
+			loadedProp.add(prop.getProperty("target2"));
+			loadedProp.add(prop.getProperty("target3"));
+			loadedProp.add(prop.getProperty("target4"));
+			loadedProp.add(prop.getProperty("target5"));
+			
 			return loadedProp;
 			}
 		

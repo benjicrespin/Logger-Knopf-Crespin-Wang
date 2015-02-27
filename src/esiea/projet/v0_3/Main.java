@@ -10,7 +10,6 @@ public class Main {
 		MyClass myClass = new MyClass();
 		
 		//LoadPropertiesInProg prop = new LoadPropertiesInProg();
-		
 		//prop.getLevel();
 		//System.out.println("[FOR PROPERTIES TEST USE ONLY: " + prop.getLevel() + ", " + prop.getFormator() + ", "+ prop.getTarget1() + "]");
 		

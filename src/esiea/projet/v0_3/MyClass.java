@@ -9,14 +9,39 @@ public class MyClass {
 	private LoggerFactory loggerFactoryFile = new LoggerFactoryFile();
 	private Logger loggerFile = loggerFactoryFile.createLogger(MyClass.class);
 	
+	FileWritting test;
+	RotatingFileWritting test2;
+	
+	public MyClass() {
+		
+	}
+	
 	public void init(){
 		
 		LoadPropertiesInProg prop;
 		prop = new LoadPropertiesInProg();
-		loggerConsole.setLevel(prop.getLevel());
-		loggerDB.setLevel(prop.getLevel());
-		loggerFile.setLevel(prop.getLevel());
 		
+		if (prop.getConsole().compareTo("true") == 0){
+			loggerConsole.setLevel(prop.getLevel());
+			
+		}
+		if (!prop.getTarget2().isEmpty()){
+			loggerFile.setLevel(prop.getLevel());
+			
+		}
+		if (!prop.getTarget3().isEmpty()){
+			loggerFile.setLevel(prop.getLevel());
+			
+		}
+		
+		
+		test = new FileWritting();
+		test2 = new RotatingFileWritting();
+		
+		for (int i = 0; i < 150; i++){
+			test.OutputTextPrint("./src/log/log.txt", "test");
+			test2.OutputTextPrint("./src/rlog/log.txt", "test");
+		}
 		//loggerConsole.info("init.....");
 		//loggerDB.info("init....");
 		//loggerFile.info("init....");
