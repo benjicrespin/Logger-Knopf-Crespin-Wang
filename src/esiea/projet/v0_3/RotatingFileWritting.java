@@ -18,8 +18,9 @@ public class RotatingFileWritting {
 		PrintWriter outputTxt = null;
 		
 		try{
+				
 				file = new File(target.replaceAll(".txt", "") + counter + ".txt");
-				if (file.length() < 100) {
+				if (file.length() <= 500) {
 					outputTxt = new PrintWriter(new FileWriter(file, true)) ;
 					outputTxt.print(message);
 					outputTxt.println();
@@ -28,9 +29,9 @@ public class RotatingFileWritting {
 					counter++;
 				}
 		}catch(IOException e){
-			System.out.println(e);
+			System.out.println("Erreur :" + e);
 		} finally {
-		   try {outputTxt.close() ;} catch (Exception ex) {}
+		   try {outputTxt.close() ;} catch (Exception ex) {System.out.println("Erreur! :" + ex);}
 		}
 	}
 }

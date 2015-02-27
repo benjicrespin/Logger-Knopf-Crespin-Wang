@@ -30,13 +30,13 @@ public class MyClass {
 		loggerFile.setFormator(prop.getFormator());
 		loggerRotatingFile.setFormator(prop.getFormator());
 		
-		loggerConsole.info("testing.....");
-		loggerFile.info("testing....");
-		loggerRotatingFile.info("testing");
+		loggerConsole.info("testing1.....");
+		loggerFile.info("testing2....");
+		//loggerRotatingFile.info("testing3");
 		
-		loggerConsole.debug("testing.....");
-		loggerFile.debug("testing....");
-		loggerRotatingFile.debug("testing");
+		loggerConsole.debug("testing4.....");
+		loggerFile.debug("testing5....");
+		//loggerRotatingFile.debug("testing6");
 		
 		System.out.println();
 		

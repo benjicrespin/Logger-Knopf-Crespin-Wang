@@ -24,7 +24,7 @@ public class FileWritting {
 		}catch(IOException e){
 			System.out.println(e);
 		} finally {
-		   try {outputTxt.close() ;} catch (Exception ex) {}
+		   try {outputTxt.close() ;} catch (Exception ex) {System.out.println(ex);}
 		}
 	}
 }

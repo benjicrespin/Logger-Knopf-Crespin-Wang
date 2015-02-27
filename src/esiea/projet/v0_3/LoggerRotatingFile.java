@@ -17,10 +17,10 @@ public class LoggerRotatingFile extends Logger {
 		// TODO Auto-generated method stub
 		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
-		writting.OutputTextPrint(prop.getTargets().get(3), message);
+		writting.OutputTextPrint(prop.getTargets().get(3), useFormator());
 		//setLevel(Level.DEBUG);
 		setDate();
-		System.out.println(useFormator());
+		//System.out.println(useFormator());
 	}
 
 	@Override
@@ -28,10 +28,10 @@ public class LoggerRotatingFile extends Logger {
 		// TODO Auto-generated method stub
 		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
-		writting.OutputTextPrint(prop.getTargets().get(3), message);
+		writting.OutputTextPrint(prop.getTargets().get(3), useFormator());
 		//setLevel(Level.INFO);
 		setDate();
-		System.out.println(useFormator());
+		//System.out.println(useFormator());
 	}
 
 	@Override
@@ -39,10 +39,10 @@ public class LoggerRotatingFile extends Logger {
 		// TODO Auto-generated method stub
 		//System.out.println("File writing[FOR TEST ONLY]:");
 		setMessage(message);
-		writting.OutputTextPrint(prop.getTargets().get(3), message);
+		writting.OutputTextPrint(prop.getTargets().get(3), useFormator());
 		//setLevel(Level.ERROR);
 		setDate();
-		System.out.println(useFormator());
+		//System.out.println(useFormator());
 	}
 
 }

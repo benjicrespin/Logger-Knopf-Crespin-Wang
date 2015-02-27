@@ -9,10 +9,6 @@ public class Main {
 		// make a new class for test
 		MyClass myClass = new MyClass();
 		
-		//LoadPropertiesInProg prop = new LoadPropertiesInProg();
-		//prop.getLevel();
-		//System.out.println("[FOR PROPERTIES TEST USE ONLY: " + prop.getLevel() + ", " + prop.getFormator() + ", "+ prop.getTarget1() + "]");
-		
 		// start function init()
 		myClass.init();
 	}

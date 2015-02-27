@@ -103,7 +103,7 @@ public abstract class Logger {
 		return date + 
 				"	[ " + 
 				"NAME = " + name + 
-				", LEVEL = " + level + 
+				", LEVEL = " + this.level + 
 				", MESSAGE = " + message + " ]";
 	
 	}
