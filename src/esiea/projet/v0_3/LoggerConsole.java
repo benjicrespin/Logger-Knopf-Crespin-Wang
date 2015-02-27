@@ -10,7 +10,7 @@ public class LoggerConsole extends Logger {
 	@Override
 	public void debug(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("Console writing[FOR TEST ONLY]:");
+		//System.out.println("Console writing[FOR TEST ONLY]:");
 		setMessage(message);
 		//setLevel(Level.DEBUG);
 		setDate();
@@ -20,7 +20,7 @@ public class LoggerConsole extends Logger {
 	@Override
 	public void info(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("Console writing[FOR TEST ONLY]:");
+		//System.out.println("Console writing[FOR TEST ONLY]:");
 		setMessage(message);
 		//setLevel(Level.INFO);
 		setDate();
@@ -30,7 +30,7 @@ public class LoggerConsole extends Logger {
 	@Override
 	public void error(String message) {
 		// TODO Auto-generated method stub
-		System.out.println("Console writing[FOR TEST ONLY]:");
+		//System.out.println("Console writing[FOR TEST ONLY]:");
 		setMessage(message);
 		//setLevel(Level.ERROR);
 		setDate();

@@ -1,7 +1,5 @@
 package esiea.projet.v0_3;
 
-import java.lang.invoke.SwitchPoint;
-
 public class MyClass {
 	
 	private LoggerFactory loggerFactoryConsole = new LoggerFactoryConsole();
@@ -38,10 +36,10 @@ public class MyClass {
 		
 		System.out.println();
 		
-		loggerConsole.showMessage(Level.DEBUG, "init");
+		/*loggerConsole.showMessage(Level.DEBUG, "init");
 		System.out.println("------------------------------------");
 		loggerFile.showMessage(Level.ERROR, "init");
-		System.out.println("------------------------------------");
+		System.out.println("------------------------------------");*/
 	}
 	
 	public void useLogger(Level level, String message)
